@@ -1,5 +1,6 @@
 @import "_normalize";
 @import "_variables";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=latin-ext');
 
 html {
   box-sizing: border-box;
@@ -15,6 +16,7 @@ body {
   align-items: center;
   background: $blue;
   display: flex;
+  font-family: 'Roboto', sans-serif;
   justify-content: center;
   min-height: 100vh;
   padding: 16px;
@@ -34,6 +36,7 @@ body {
 .waterglass__button--add {
   background: #ffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
   width: 216px;
   height: 47px;
   border-radius: 5px;
@@ -44,8 +47,9 @@ body {
 .waterglass__button--remove {
   background: transparent;
   border: none;
-  color: #ffff;
+  color: #F5E5E7;
   font-size: 14px;
+  font-weight: 500;
   width: 184px;
   height: 23px;
   border-radius: 5px;
