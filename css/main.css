@@ -338,6 +338,9 @@ body {
   width: 100%; }
 
 .waterglass {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,38 +348,36 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative; }
 
 .waterglass__button--add {
   background: #ffff;
+  border-radius: 5px;
+  border: none;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  font-weight: 500;
-  width: 216px;
-  height: 48px;
-  border-radius: 5px;
   font-size: 18px;
-  margin-bottom: 37px; }
+  font-weight: 500;
+  height: 48px;
+  margin-bottom: 37px;
+  width: 216px; }
 
 .waterglass__button--remove {
   background: transparent;
   border: none;
+  border-radius: 5px;
   color: #f5e5e7;
   font-size: 14px;
   font-weight: 500;
-  width: 184px;
   height: 24px;
-  border-radius: 5px; }
+  width: 184px; }
 
 .waterglass__counter {
-  font-weight: 500;
-  z-index: 1;
-  position: absolute;
   font-size: 112px;
-  top: 114px; }
+  font-weight: 500;
+  position: absolute;
+  top: 114px;
+  z-index: 1; }
 
 .waterglass__image {
   margin-bottom: 48px; }
