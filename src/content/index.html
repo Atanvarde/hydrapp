@@ -10,7 +10,7 @@
     content="A simple PWA Application with local storage support. Use it to keep track on how much water you drink a day" />
 
   <meta name="theme-color" content="#3767AD" />
-  
+
   <meta property="og:title" content="hydrApp" />
 
   <meta property="og:description" content="Drink pure water. Stay healthy." />
@@ -38,6 +38,13 @@
 
 <body>
   <main class="main">
+    <div class="switch">
+      <span class="switch__info">Audio:</span>
+      <label class="switch__label">
+        <input class="switch__checkbox" type="checkbox">
+        <span class="switch__slider"></span>
+      </label>
+    </div>
     <section class="waterglass">
       <img class="waterglass__image" src="assets/img/water-glass.svg" alt="glass of blue water">
       <div class="waterglass__counter waterglass__counter--js"></div>
