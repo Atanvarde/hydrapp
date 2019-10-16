@@ -70,8 +70,8 @@ body {
   font-size: 14px;
   content: "ON";
   height: 28px;
-  width: 28px;
-  left: 7px;
+  width: 30px;
+  left: 6px;
   bottom: 4px;
   background-color: #fff;
   transition: 0.4s;
@@ -82,15 +82,16 @@ body {
 
 .switch__slider:after {
   border-radius: 4px;
-  bottom: 4px;
+  bottom: 2px;
+  color: #999999;
   content: "OFF";
   font-size: 14px;
-  height: 26px;
+  height: 28px;
   left: 5px;
   padding: 5px 2px 0 3px;
   position: absolute;
   transition: 0.4s;
-  width: 26px;
+  width: 28px;
 }
 
 .switch__checkbox:checked + .switch__slider {
