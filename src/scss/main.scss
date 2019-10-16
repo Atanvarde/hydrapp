@@ -28,16 +28,17 @@ body {
   max-width: 375px;
   width: 100%;
 }
-.switch {
+
+.switch-wrapper {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 32px;
 }
 
 .switch__checkbox {
+  height: 0;
   opacity: 0;
   width: 0;
-  height: 0;
 }
 
 .switch__info {
@@ -46,21 +47,21 @@ body {
 }
 
 .switch__label {
-  position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
+  height: 36px;
+  position: relative;
+  width: 68px;
 }
 
 .switch__slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #ccc;
   border-radius: 4px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
   transition: 0.4s;
 }
 
@@ -68,14 +69,28 @@ body {
   position: absolute;
   font-size: 14px;
   content: "ON";
-  height: 26px;
-  width: 26px;
-  left: 4px;
+  height: 28px;
+  width: 28px;
+  left: 7px;
   bottom: 4px;
   background-color: #fff;
   transition: 0.4s;
   border-radius: 4px;
+  padding: 7px 1px 0 4px;
+  color: transparent;
+}
+
+.switch__slider:after {
+  border-radius: 4px;
+  bottom: 4px;
+  content: "OFF";
+  font-size: 14px;
+  height: 26px;
+  left: 5px;
   padding: 5px 2px 0 3px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
 }
 
 .switch__checkbox:checked + .switch__slider {
@@ -86,8 +101,14 @@ body {
   box-shadow: 0 0 1px #2196f3;
 }
 
-.switch__checkbox + .switch__slider:before {
+.switch__checkbox:checked + .switch__slider:before {
+  color: #000;
   transform: translateX(26px);
+}
+
+.switch__checkbox:checked + .switch__slider:after {
+  color: transparent;
+  transform: translateX(-30px);
 }
 
 .waterglass {
