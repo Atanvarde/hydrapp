@@ -26,7 +26,10 @@ const glassCounter = document.querySelector(".waterglass__counter--js");
 
 const audioSwitch = document.querySelector(".switch__checkbox--js");
 
-const waterSound = document.querySelector(".switch__audio--js");
+const waterSound = document.querySelector(".switch__audio--watersound-js");
+
+const drainSound = document.querySelector(".switch__audio--drainsound-js");
+
 
 const key = new Date().toISOString().slice(0, 10);
 
@@ -46,6 +49,7 @@ buttonAdd.addEventListener('click', (e) => {
   glassCounter.innerHTML = ++counterValue;
   localStorage.setItem(key, counterValue);
   if (audioSwitch.checked) {
+    drainSound.pause();
     waterSound.play();
   }
 })
@@ -56,4 +60,10 @@ buttonRemove.addEventListener('click', (e) => {
     glassCounter.innerHTML = --counterValue;
     localStorage.setItem(key, counterValue);
   }
+  if (audioSwitch.checked) {
+    waterSound.pause();
+    drainSound.play();
+  }
+
 });
+
