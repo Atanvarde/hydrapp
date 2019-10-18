@@ -54,7 +54,6 @@ buttonAdd.addEventListener('click', (e) => {
   }
 })
 
-
 buttonRemove.addEventListener('click', (e) => {
   if (localStorage.getItem(key) > 0) {
     glassCounter.innerHTML = --counterValue;
@@ -64,6 +63,7 @@ buttonRemove.addEventListener('click', (e) => {
     waterSound.pause();
     drainSound.play();
   }
-
 });
+
+
 
